@@ -1,100 +1,106 @@
-#skip{
-    position:absolute;
+/* Hides the element with id "skip" by moving it far to the left */
+#skip {
+    position: absolute;
     left: -500px;
 }
 
-#skip:focus{
+/* When element with id "skip" is focused, moves it to the right */
+#skip:focus {
     left: 100px;    
-
 }
 
+/* Styles for headings (h1) */
+h1 {
+    font-size: 80px; /* Sets the font size of h1 elements to 99 pixels */
+}
 
-h1 {font-size: 99px;
-    
-    /* Example CSS for styling the download link */
+/* Styles for anchor (link) elements */
 a {
-    color: #000; /* Link color */
-    text-decoration: none; /* Remove underline */
-  }
-  
-  a:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
-  
-
-    
-
+    color: #000; /* Sets the text color of anchor elements to black */
+    text-decoration: none; /* Removes the underline from anchor elements */
 }
+  
+/* Styles for anchor elements on hover */
+a:hover {
+    text-decoration: underline; /* Underlines anchor elements on hover */
+}
+
+/* Styles for the body of the document */
 body {
-    background-color: rgb(199, 240, 205);
-    font-family: 'Lexend Deca', sans-serif;
-    width: 800px; 
-    margin: auto;
-    color: #054337;
-  }
+    background-color: rgb(199, 240, 205); /* Sets the background color */
+    font-family: 'Lexend Deca', sans-serif; /* Sets the font family */
+    width: 800px; /* Sets the width of the body */
+    margin: auto; /* Centers the body horizontally */
+    color: #054337; /* Sets the text color */
+}
 
+/* Styles for the navigation bar */
 nav {
-    background-color: #ffffff;
-    overflow: hidden;
-  }
+    background-color: #ffffff; /* Sets the background color of the navigation bar */
+    overflow: hidden; /* Ensures that content does not overflow */
+}
   
-  /* Style the links inside the navigation bar */
-  nav a {
-    float: left;
-    color: #054337;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    font-family:'Courier New', Courier, monospace
-
-  }
+/* Styles for navigation links */
+nav a {
+    float: left; /* Aligns the links horizontally */
+    color: #054337; /* Sets the text color of the links */
+    text-align: center; /* Centers the text within the links */
+    padding: 14px 16px; /* Sets padding for the links */
+    text-decoration: none; /* Removes underline from the links */
+    font-size: 17px; /* Sets the font size of the links */
+    font-family:'Courier New', Courier, monospace; /* Sets the font family */
+}
   
-  /* Change the color of links on hover */
-  nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+/* Styles for navigation links on hover */
+nav a:hover {
+    background-color: #ddd; /* Sets background color on hover */
+    color: black; /* Sets text color on hover */
+}
   
-  /* Add a color to the active/current link */
-  nav a.active {
-    background-color: #979b99;
-    color: white;
-  }
+/* Styles for active/current navigation link */
+nav a.active {
+    background-color: #979b99; /* Sets background color */
+    color: white; /* Sets text color */
+}
 
+/* Styles for image grid */
+.image-grid {
+    display: grid; /* Creates a grid layout */
+    grid-template-columns: 1fr 1fr 1fr; /* Sets the number of columns */
+}
 
-.image-grid{
+/* Styles for images within the image grid */
+.image-grid img {
+    width: 90%; /* Sets the width of the images */
+    border: solid rgb(0, 0, 0) 4px; /* Sets border color and width */
+    border-bottom-right-radius: 30px; /* Adds rounded border radius to bottom right corner */
+}
+
+/* Media query for screen sizes above 776px */
+@media screen and (min-width: 900px) {
+    .blog-gallery {
+        grid-template-columns: 30% 30%; /* Adjusts grid layout for larger screens */
+        grid-gap: 30px; /* Adds gap between grid items */
+    }
+}
+
+/* Media query for screen sizes above 995px */
+@media screen and (min-width: 995px) {
+    .blog-gallery {
+        grid-template-columns: 45% 45%; /* Adjusts grid layout for larger screens */
+        grid-gap: 50px; /* Adds gap between grid items */
+    }
+}
+
+.image-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px; /* Add space between rows and columns */
 }
 
-.image-grid img{
+.image-grid img {
     width: 80%;
-    border: solid blue 3px;
+    border: solid rgb(0, 0, 0) 5px;
     border-bottom-right-radius: 45px;
 }
-
-border-radius: 81px 154px 200px 0px;
--webkit-border-radius: 81px 154px 200px 0px;
--moz-border-radius: 81px 154px 200px 0px;
-border: 28px solid #ff6550;
-
-.img-grid img{}
-
-@media screen and (min-width: 776px){{
-    .blog-gallery{
-        grid-template-columns: 45% 45%;
-        grid-gap: 20px
-        /* justify-content: ; /* 
-    }
-}
-@media screen and (min-width: 995px){{
-    .blog-gallery{
-        grid-template-columns: 45% 45%;
-        grid-gap: 20px
-        /* justify-content: ; /* 
-    }
-}   
-
-
 
