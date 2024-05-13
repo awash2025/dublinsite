@@ -9,6 +9,10 @@
     left: 100px;    
 }
 
+body{
+    margin: 1%;
+    padding: 1%;
+}
 /* Styles for headings (h1) */
 h1 {
     font-size: 80px; /* Sets the font size of h1 elements to 99 pixels */
@@ -66,18 +70,33 @@ nav a.active {
 /* Styles for image grid */
 .image-grid {
     display: grid; /* Creates a grid layout */
-    grid-template-columns: 1fr 1fr 1fr; /* Sets the number of columns */
+    grid-template-columns: 1fr; /* Sets the number of columns */
 }
 
 /* Styles for images within the image grid */
 .image-grid img {
     width: 90%; /* Sets the width of the images */
     border: solid rgb(0, 0, 0) 4px; /* Sets border color and width */
-    border-bottom-right-radius: 30px; /* Adds rounded border radius to bottom right corner */
+    border-bottom-right-radius: 45px;
+    margin:auto}
+
+/* .blog img{
+    display: block;
+    width: 35%;
+    scroll-margin-block-end: auto;
+} */
+.blog time{
+    font-size: 18px;
+
+    
 }
 
 /* Media query for screen sizes above 776px */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
+    .image-grid {
+        grid-template-columns: 1fr 1fr; /* Sets the number of columns */
+    }
+    
     .blog-gallery {
         grid-template-columns: 30% 30%; /* Adjusts grid layout for larger screens */
         grid-gap: 30px; /* Adds gap between grid items */
@@ -90,17 +109,12 @@ nav a.active {
         grid-template-columns: 45% 45%; /* Adjusts grid layout for larger screens */
         grid-gap: 50px; /* Adds gap between grid items */
     }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px; /* Add space between rows and columns */
+    }
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px; /* Add space between rows and columns */
-}
-
-.image-grid img {
-    width: 80%;
-    border: solid rgb(0, 0, 0) 5px;
-    border-bottom-right-radius: 45px;
-}
 
