@@ -1,7 +1,7 @@
 /* Hides the element with id "skip" by moving it far to the left */
 #skip {
     position: absolute;
-    left: -500px;
+    left: -300px;
 }
 
 /* When element with id "skip" is focused, moves it to the right */
@@ -15,7 +15,7 @@ body{
 }
 /* Styles for headings (h1) */
 h1 {
-    font-size: 80px; /* Sets the font size of h1 elements to 99 pixels */
+    font-size: 70px; /* Sets the font size of h1 elements to 99 pixels */
 }
 
 /* Styles for anchor (link) elements */
@@ -32,8 +32,7 @@ a:hover {
 /* Styles for the body of the document */
 body {
     background-color: rgb(199, 240, 205); /* Sets the background color */
-    font-family: 'Lexend Deca', sans-serif; /* Sets the font family */
-    width: 800px; /* Sets the width of the body */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Sets the font family */
     margin: auto; /* Centers the body horizontally */
     color: #054337; /* Sets the text color */
 }
@@ -41,7 +40,10 @@ body {
 /* Styles for the navigation bar */
 nav {
     background-color: #ffffff; /* Sets the background color of the navigation bar */
-    overflow: hidden; /* Ensures that content does not overflow */
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
   
 /* Styles for navigation links */
@@ -52,7 +54,7 @@ nav a {
     padding: 14px 16px; /* Sets padding for the links */
     text-decoration: none; /* Removes underline from the links */
     font-size: 17px; /* Sets the font size of the links */
-    font-family:'Courier New', Courier, monospace; /* Sets the font family */
+    font-family:/* Sets the font family */
 }
   
 /* Styles for navigation links on hover */
@@ -115,6 +117,53 @@ nav a.active {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px; /* Add space between rows and columns */
     }
-}
 
+    *{
+        box-sizing: border-box;
+    }   
+}
+.image-grid{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 10px;
+ }
+ 
+ 
+ .image-grid img{
+    width: 90%;
+    border: 5px  rgb(0, 0, 0);
+    border-radius:0px;
+    padding: 5px;
+    background-color: rgb(0, 49, 1);
+    margin: auto;
+ }
+ 
+ 
+ @media all and (min-width: 725px){
+    .image-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+ 
+ 
+
+    /* .image-grid img:nth-child(4n){
+        grid-column: 1/-1;
+    } */
+ }
+ 
+ 
+ @media all and (min-width: 950px){
+    .image-grid{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+  
+    
+    }
+ 
+ 
+    /* Why do I not need a rule for image 5?  */
+ 
+ 
+
+ 
 
