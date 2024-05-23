@@ -3,7 +3,7 @@
   background-color: white;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 2s ease-out;
+  transition: max-height .5s ease-out;
 }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -38,5 +38,6 @@
     margin-bottom: 15px;
     color: #054337;
     width: 100%;
+    margin-top: 10px;
   }
   
